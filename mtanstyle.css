@@ -1,0 +1,153 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F3CFC6;
+    border-bottom: 5px dashed #4B3621;
+    height: 65px;
+}
+
+.navbar{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-width: 400px;
+}
+
+.navbar ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.navbar a{
+    color:#4B3621;
+    opacity: 0.75;
+    text-decoration: none;
+    padding: 0px;
+    text-align: center;
+}
+
+.navbar a:hover{
+    background-color: #f4b4a4;
+}
+
+.navbar li{
+    float: left;
+}
+
+.nav{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+body{
+    background-color: #FFEDE7;
+    color: #4B3621;
+    font-family: "Didot";
+    font-size: 25px;
+}
+
+.header{
+    text-align: center
+}
+
+.neda-sym{
+    width: 150px;
+    height: 150 px;
+    color: #4B3621  
+}
+
+.title{
+    text-align: center;
+    font-size: 70px;
+    font-family: "Didot";
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.links{
+    color: #4B3621;
+    opacity: 0.75;
+    font-size: 25px;
+}
+
+.mepic{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.overview{
+    line-height: 1.4;
+    text-align: center;
+}
+
+.space{
+    margin-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.bigspace{
+    margin-bottom: 100px;
+}
+
+.medspace{
+    margin-bottom: 50px;
+}
+
+.sspace{
+    margin-bottom: 15px;
+}
+
+.doubspace{
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.links2{
+    color: #e74c3c;
+}
+
+.links3{
+    color:#4B3621;
+}
+
+p{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+footer{
+    color: #4B3621;
+    opacity: 0.5;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 70px;
+    font-family: "Didot"
+}
+
+.slinks{
+    color: #4B3621;
+    font-size: 30px;
+    font-family: "Didot";
+    list-style-type: none;
+}
+
+li{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.stats a{
+    text-decoration: none;
+    font-style: italic;
+}
+
+.mythlist{
+    list-style-type: none;
+}
