@@ -1,0 +1,406 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --off-white: #F1EBE3;
+    --muted-pink: #E7CCCC;
+    --muted-green: #A5B68D;
+    --text-dark: #333;
+    --marroon: #550000;
+}
+
+/* General Styling */
+body, html {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--off-white);
+    color: var(--text-dark);
+    text-align: center;
+    width: 100%;
+    overflow-x: hidden; 
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+}
+
+/* Home Page */
+h2{
+    font-size: 2rem;
+    color: var(--text-dark);
+    opacity: 0.75;
+}
+
+#home p{
+    text-align: left;
+    text-indent: 2rem;
+}
+
+.scroll-down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.scroll-down span {
+    font-size: 1rem;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.arrow-down {
+    width: 2px;
+    height: 50px;
+    background-color: var(--text-dark);
+    position: relative;
+}
+
+.arrow-down::before,
+.arrow-down::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: solid var(--text-dark);
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    transform: rotate(45deg);
+}
+
+.arrow-down::before {
+    top: 40px;
+    left: -4px;
+}
+
+.arrow-down::after {
+    top: 40px;
+    left: -4px; 
+}
+
+.fade-in-bottom {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-bottom.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#home h3{
+    margin-top: 25rem;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+}
+
+.neda-sym {
+    width: 150px;
+    height: 150px;
+    color: #4B3621;
+}
+
+.food-anxiety{
+    width:50%;
+}
+
+/* My Story Page */
+.mepic{
+    width: 60%;
+    padding: 2rem;
+    border-radius: 4rem;
+}
+@media (max-width: 768px) {
+    .mepic{
+        width: 80%;
+    }
+}
+
+#my-story p{
+    text-align: left;
+    text-indent: 2rem;
+}
+
+/* Myths */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--text-dark);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transform: translateZ(0);
+}
+
+.card-front {
+    background-color: var(--muted-pink);
+}
+
+.card-back {
+    background-color: var(--muted-green);
+    transform: rotateY(180deg);
+}
+
+/* Statistics */
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10rem;
+    padding: 20px;
+}
+
+.chart-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.chart-container canvas {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+}
+
+.chart-caption {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+#statistics ul {
+    text-align: center;
+    padding: 20px;
+}
+
+#statistics ul li {
+    margin-bottom: 10px;
+    list-style: none;
+    line-height: 10rem;
+}
+
+#statistics a{
+    color: var(--marroon);
+}
+
+#statistics a:hover{
+    color: var(--muted-green);
+}
+
+@media (max-width: 768px) {
+    #statistics ul li {
+        margin-bottom: 10px;
+        list-style: none;
+        line-height: 2rem;
+    }
+}
+
+/* Diagnosis and Treatment */
+#diagnosis li{
+    text-align: left;
+    padding: 1rem;
+}
+
+#diagnosis a{
+    color: var(--marroon);
+}
+
+#diagnosis a:hover{
+    color: var(--muted-green);
+}
+
+.sources{
+    font-size: 0.5rem;
+    margin-top: 5rem;
+}
+
+/* Get Help */
+#help li{
+    text-align: left;
+    padding: 1rem;
+}
+
+#help a{
+    color: var(--marroon);
+}
+
+#help a:hover{
+    color: var(--muted-green);
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--muted-pink);
+    padding: 15px 5%; 
+    position: fixed;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%); 
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-dark);
+    white-space: nowrap;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    color: var(--muted-green);
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: var(--muted-pink);
+    border: none;
+    color: var(--text-dark);
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s ease-in-out;
+}
+.menu-toggle:hover {
+    color: var(--muted-green);
+}
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background: var(--muted-pink);
+        top: 60px;
+        right: 0; /* Align to the right */
+        width: 50vw; /* Smaller width */
+        padding: 10px;
+        text-align: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links li {
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
+/* Page Sections */
+.page {
+    min-height: 100vh;
+    padding: 100px 5%;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    margin-bottom: 40px; 
+}
+
+.page.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Source Links */
+.source-link {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+    color: var(--muted-pink);
+    text-decoration: none;
+}
+
+.source-link:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: var(--muted-pink);
+    color: var(--text-dark);
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0px -6px 10px rgba(0, 0, 0, 0.4);
+    margin-top: 40px; 
+}
+
+footer a {
+    color: var(--text-dark);
+    text-decoration: underline;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--muted-green);
+}
