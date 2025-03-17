@@ -101,24 +101,32 @@ h2{
     color: var(--text-dark);
 }
 
-.neda-sym {
-    width: 150px;
-    height: 150px;
+.logo {
+    width: 20%;
+    height: auto;
     color: #4B3621;
 }
 
 .food-anxiety{
-    width:50%;
+    width: 30%;
 }
 
 /* My Story Page */
 .mepic{
-    width: 60%;
+    width: 50%;
     padding: 2rem;
     border-radius: 4rem;
 }
 @media (max-width: 768px) {
     .mepic{
+        width: 80%;
+    }
+
+    .logo{
+        width: 50%;
+    }
+
+    .food-anxiety{
         width: 80%;
     }
 }
@@ -221,7 +229,7 @@ h2{
 #statistics ul li {
     margin-bottom: 10px;
     list-style: none;
-    line-height: 10rem;
+    line-height: 5rem;
 }
 
 #statistics a{
@@ -237,6 +245,10 @@ h2{
         margin-bottom: 10px;
         list-style: none;
         line-height: 2rem;
+    }
+
+    .chart-container {
+        gap: 5rem;
     }
 }
 
