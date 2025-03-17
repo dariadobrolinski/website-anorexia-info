@@ -343,11 +343,12 @@ nav {
         position: absolute;
         background: var(--muted-pink);
         top: 60px;
-        right: 0; /* Align to the right */
-        width: 50vw; /* Smaller width */
+        right: 0;
+        width: 50vw;
         padding: 10px;
         text-align: center;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
     }
     .nav-links.active {
         display: flex;
