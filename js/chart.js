@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const ctx2 = document.getElementById('chart2').getContext('2d');
     const ctx3 = document.getElementById('chart3').getContext('2d');
     const ctx4 = document.getElementById('chart4').getContext('2d');
+    const ctx5 = document.getElementById('chart5').getContext('2d');
 
     new Chart(ctx1, {
         type: 'bar',
@@ -107,4 +108,30 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     });
-});
+
+        new Chart(ctx5, {
+            type: 'pie',
+            data: {
+                labels: ['Disordered Eating', 'No Disordered Eating'],
+                datasets: [{
+                    label: 'Disordered Eating in Children and Adolescents (%)',
+                    data: [22, 78],
+                    backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)'],
+                    borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Disordered Eating in Children and Adolescents'
+                    }
+                }
+            }
+        });
+    });
