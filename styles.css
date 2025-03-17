@@ -1,4 +1,4 @@
-/* Import Google Font */
+/* Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 :root {
@@ -27,7 +27,7 @@ h1 {
 }
 
 /* Home Page */
-#home h1,h2{
+#home h1, h2{
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -423,7 +423,6 @@ footer a:hover {
         list-style: none;
         line-height: 2rem;
     }
-
     .chart-container {
         gap: 5rem;
     }
