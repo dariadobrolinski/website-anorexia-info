@@ -1,4 +1,7 @@
 # Embrace Every You
+
+<img width="1396" alt="Screenshot 2025-03-27 at 11 45 32 AM" src="https://github.com/user-attachments/assets/991df018-d1a6-444f-8d54-8c35fb9492e2" />
+
 Embrace Every You is a website dedicated to spreading awareness about Anorexia Nervosa, debunking common myths, providing statistics, and offering resources for those struggling with the disorder. The website aims to educate and support individuals by sharing personal stories, treatment options, and helpful resources.
 
 ## Table of Contents
