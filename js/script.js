@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to show the correct section
     function showPage(hash) {
+        const links = document.querySelectorAll("nav a");
+        const sections = document.querySelectorAll(".page");
+
         sections.forEach(section => {
             section.classList.remove("active");
             if (`#${section.id}` === hash) {
@@ -17,6 +20,13 @@ document.addEventListener("DOMContentLoaded", function () {
                         element.style.animationPlayState = 'running';
                     });
                 }
+            }
+        });
+
+        links.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === hash) {
+                link.classList.add("active");
             }
         });
     }

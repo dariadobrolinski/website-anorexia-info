@@ -5,6 +5,7 @@
     --off-white: #F1EBE3;
     --muted-pink: #E7CCCC;
     --muted-green: #A5B68D;
+    --darker-green: #869472;
     --text-dark: #333;
     --marroon: #550000;
 }
@@ -335,7 +336,8 @@ nav {
     border-radius: 5px;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--muted-green);
 }
 
