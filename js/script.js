@@ -69,7 +69,13 @@ document.addEventListener("DOMContentLoaded", function () {
         "You are strong.",
         "You matter.",
         "Recovery is possible.",
-        "Take it one step at a time."
+        "Take it one step at a time.",
+        "You are worthy of love and acceptance.",
+        "Recovery isn't linear, but it is possible.",
+        "Be kind to the body that carries you.",
+        "You matter.",
+        "Keep going, you got this :)",
+        "You are not alone.",
     ];
 
     const messageContainer = document.getElementById("encouraging-messages");
