@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Be kind to the body that carries you.",
         "You matter.",
         "Keep going, you got this :)",
-        "You are not alone.",
+        "Let yourself heal."
     ];
 
     const messageContainer = document.getElementById("encouraging-messages");
