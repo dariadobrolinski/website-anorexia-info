@@ -5,7 +5,6 @@
     --off-white: #F1EBE3;
     --muted-pink: #E7CCCC;
     --muted-green: #A5B68D;
-    --darker-green: #869472;
     --text-dark: #333;
     --marroon: #550000;
 }
@@ -275,7 +274,7 @@ h2{
 }
 
 .encouraging-message {
-    background-color: var(--muted-pink);
+    background-color: var(--muted-green);
     color: var(--text-dark);
     padding: 10px 15px;
     border-radius: 8px;

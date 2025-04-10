@@ -119,12 +119,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const sections = document.querySelectorAll(".page");
     function handlePageChange() {
-        const hash = window.location.hash;
+        const hash = window.location.hash || "#home"; // Default to #home if no hash is present
         if (hash === "#help") {
             startMessages();
         }
+        showPage(hash); // Ensure the correct section is displayed
     }
 
     window.addEventListener("hashchange", handlePageChange);
     handlePageChange(); 
+});
+
+// Call handlePageChange on page load
+document.addEventListener("DOMContentLoaded", function () {
+    handlePageChange();
+    window.addEventListener("hashchange", handlePageChange);
 });
