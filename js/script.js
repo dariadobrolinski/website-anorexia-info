@@ -60,3 +60,55 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('scroll', handleScroll);
     handleScroll(); 
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const messages = [
+        "You're beautiful.",
+        "You are enough.",
+        "You are loved.",
+        "You are strong.",
+        "You matter.",
+        "Recovery is possible.",
+        "Take it one step at a time."
+    ];
+
+    const messageContainer = document.getElementById("encouraging-messages");
+    let currentMessageIndex = 0;
+
+    function showMessage() {
+        const message = document.createElement("div");
+        message.className = "encouraging-message";
+        message.textContent = messages[currentMessageIndex];
+
+        messageContainer.appendChild(message);
+
+        setTimeout(() => {
+            message.classList.add("visible");
+        }, 100);
+
+        setTimeout(() => {
+            message.classList.remove("visible");
+            setTimeout(() => {
+                messageContainer.removeChild(message);
+            }, 500);
+        }, 5000);
+
+        currentMessageIndex = (currentMessageIndex + 1) % messages.length;
+    }
+
+    function startMessages() {
+        showMessage();
+        setInterval(showMessage, 7000);
+    }
+
+    const sections = document.querySelectorAll(".page");
+    function handlePageChange() {
+        const hash = window.location.hash;
+        if (hash === "#help") {
+            startMessages();
+        }
+    }
+
+    window.addEventListener("hashchange", handlePageChange);
+    handlePageChange(); 
+});

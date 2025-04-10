@@ -261,6 +261,35 @@ h2{
     color: var(--muted-green);
 }
 
+/* Encouraging Messages */
+#encouraging-messages {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.encouraging-message {
+    background-color: var(--muted-pink);
+    color: var(--text-dark);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.encouraging-message.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Navigation Bar */
 nav {
     display: flex;
@@ -425,5 +454,15 @@ footer a:hover {
     }
     .chart-container {
         gap: 5rem;
+    }
+    #encouraging-messages {
+        bottom: 10px;
+        left: 10px;
+        max-width: 90%;
+    }
+
+    .encouraging-message {
+        font-size: 0.8rem;
+        padding: 8px 12px;
     }
 }
