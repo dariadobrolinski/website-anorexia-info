@@ -92,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentMessageIndex = 0;
 
     function showMessage() {
+        console.log("showMessage called");
         const message = document.createElement("div");
         message.className = "encouraging-message";
         message.textContent = messages[currentMessageIndex];
