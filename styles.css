@@ -337,8 +337,7 @@ nav {
 
 .nav-links a:hover,
 .nav-links a.active {
-    background: var(--muted-green);
-    opacity: 0.7;
+    background: rgba(165, 182, 141, 0.4);
     border-radius: 20px;
 }
 
