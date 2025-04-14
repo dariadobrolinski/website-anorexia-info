@@ -338,7 +338,7 @@ nav {
 .nav-links a:hover,
 .nav-links a.active {
     background: rgba(165, 182, 141, 0.4);
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 /* Mobile Menu Toggle */
