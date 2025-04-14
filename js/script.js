@@ -13,13 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
             section.classList.remove("active");
             if (`#${section.id}` === hash) {
                 section.classList.add("active");
-                // Trigger animations for the home section
-                if (section.id === "home") {
-                    const fadeInElements = section.querySelectorAll('.fade-in');
-                    fadeInElements.forEach(element => {
-                        element.style.animationPlayState = 'running';
-                    });
-                }
             }
         });
 
@@ -118,21 +111,34 @@ document.addEventListener("DOMContentLoaded", function () {
         setInterval(showMessage, 7000);
     }
 
-    const sections = document.querySelectorAll(".page");
+    function showPage(hash) {
+        const links = document.querySelectorAll("nav a");
+        const sections = document.querySelectorAll(".page");
+
+        sections.forEach(section => {
+            section.classList.remove("active");
+            if (`#${section.id}` === hash) {
+                section.classList.add("active");
+            }
+        });
+
+        links.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === hash) {
+                link.classList.add("active");
+            }
+        });
+    }
+
     function handlePageChange() {
         const hash = window.location.hash || "#home"; // Default to #home if no hash is present
-        if (hash === "#help") {
-            startMessages();
-        }
         showPage(hash); // Ensure the correct section is displayed
     }
 
-    window.addEventListener("hashchange", handlePageChange);
-    handlePageChange(); 
-});
+    // Start encouraging messages globally
+    startMessages();
 
-// Call handlePageChange on page load
-document.addEventListener("DOMContentLoaded", function () {
-    handlePageChange();
+    // Handle page changes
     window.addEventListener("hashchange", handlePageChange);
+    handlePageChange();
 });
